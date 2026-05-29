@@ -1,0 +1,30 @@
+{
+  "name": "cadastro-de-pets",
+  "description": "API REST para cadastro de usuários e pets, com autenticação JWT e documentação Swagger.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test-rest-external && npm run test-rest-external",
+    "start-rest": "node rest/server.js",
+    "test-rest-external": "mocha test/rest/external/*.test.js --timeout 10000 --reporter mochawesome",
+    "test-rest-controller": "mocha test/rest/controller/*.test.js --timeout 10000 --reporter mochawesome",
+    "start": "node rest/server.js"
+  },
+  "author": "Tiago Andrade",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "4.5.0",
+    "chai-exclude": "^2.1.1",
+    "dotenv": "^17.2.2",
+    "mocha": "^11.7.2",
+    "mochawesome": "^7.1.3",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4"
+  }
+}
