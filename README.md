@@ -122,6 +122,29 @@ GET /mypets?type=Cachorro
 GET /mypets?name=Rex&type=Cachorro
 ```
 
+## Dados Iniciais
+
+Ao iniciar a aplicação, alguns usuários e pets já vêm pré-cadastrados em memória.
+
+### Usuários
+
+| id | username | password |
+| --- | --- | --- |
+| 1 | `tiago` | `123456` |
+| 2 | `ricardo` | `456789` |
+
+As senhas são armazenadas no model em formato de hash usando `bcryptjs`, mas podem ser usadas em texto puro no login.
+
+### Pets
+
+| id | userId | name | type |
+| --- | --- | --- | --- |
+| 1 | 1 | `Luke` | `Cão` |
+| 2 | 1 | `Maurício` | `Jabuti` |
+| 3 | 2 | `Pandora` | `Gato` |
+
+O campo `userId` indica a qual usuário cada pet pertence.
+
 ## Testes
 
 O projeto possui testes de controller e testes externos para a API REST.
