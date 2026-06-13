@@ -1,0 +1,8 @@
+{
+  "status": "Operacional",
+  "version": "1.0.0",
+  "database": {
+    "status": "Operacional",
+    "maxConnections": 900
+  }
+}
